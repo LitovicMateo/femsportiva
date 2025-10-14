@@ -24,6 +24,10 @@ const Navbar = () => {
   return (
     <header className={styles.container}>
       <Toggle clickHandler={handleMenu} />
+      <div className={styles.mobileLogo}>
+        <LogoMain />
+      </div>
+
       <div className={styles.header}>
         <div className={styles.innerContainer}>
           <div style={{ width: "68px", height: "68px" }}>
