@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import React from "react";
 import {
@@ -14,7 +14,7 @@ import {
   FacebookMessengerIcon,
 } from "react-share";
 
-import styles from './ArticleShare.module.css'
+import styles from "./ArticleShare.module.css";
 
 type ArticleShareProps = {
   url: string;
@@ -26,16 +26,16 @@ const ArticleShare: React.FC<ArticleShareProps> = ({ url }) => {
       <h3>Podijeli ovaj članak</h3>
       <div className={styles.iconContainer}>
         <FacebookShareButton
-          hashtag="#sportcastplus"
+          hashtag="#femsportiva"
           url={url}
-          title="SportCastPlus"
+          title="femsportiva"
         >
-          <FacebookIcon  round />
+          <FacebookIcon round />
         </FacebookShareButton>
         <FacebookMessengerShareButton appId={"6147615245363305"} url={url}>
           <FacebookMessengerIcon size={36} round />
         </FacebookMessengerShareButton>
-        <TwitterShareButton hashtags={["sportcastplus"]} url={url}>
+        <TwitterShareButton hashtags={["femsportiva"]} url={url}>
           <TwitterIcon size={36} round />
         </TwitterShareButton>
         <WhatsappShareButton url={url}>

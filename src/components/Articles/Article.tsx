@@ -52,7 +52,7 @@ const Article: React.FC<ArticleProps> = ({
         <>
           <ArticleTags tags={tags!} />
           <ArticleShare
-            url={`https://sportcast.plus/${categorySlug}/${slug}`}
+            url={`https://femsportiva.com/${categorySlug}/${slug}`}
           />
         </>
       )}
