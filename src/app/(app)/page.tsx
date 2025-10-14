@@ -13,14 +13,6 @@ export const revalidate = 0;
 export default async function Home() {
   const posts = await fetchRecentPosts();
 
-  const manifestPosts = posts!
-    .filter((p) => p.categories.nodes[0].slug === "sportcastov-manifest")
-    .slice(0, 4);
-
-  const kolumnePosts = posts!
-    .filter((p) => p.categories.nodes[0].slug === "kolumne")
-    .slice(0, 4);
-
   return (
     <main className={styles.page}>
       {posts && (
@@ -34,13 +26,9 @@ export default async function Home() {
             />
           </div>
           <ArticleList posts={posts!.slice(4, 8)} />
-          <ArticleGrid posts={manifestPosts} />
           <ArticleList posts={posts!.slice(9, 12)} />
-          <YouTubeCTA />
           <ArticleList posts={posts!.slice(13, 16)} />
-          <ArticleGrid posts={kolumnePosts} />
           <ArticleList posts={posts!.slice(17, 20)} />
-          <InstagramCTA />
           <ArticleList posts={posts!.slice(21, 24)} />
         </>
       )}

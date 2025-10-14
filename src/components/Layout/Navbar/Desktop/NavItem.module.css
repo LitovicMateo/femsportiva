@@ -1,16 +1,16 @@
 .item {
-    transition: all 0.5 linear;
+  transition: all 0.5 linear;
 }
 
 .label {
-    font-size: inherit;
-    font-weight: 600;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    text-transform: uppercase;
-    line-height: 1em;
+  font-size: inherit;
+  font-weight: 600;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-transform: uppercase;
+  line-height: 1em;
 }
 
 .item:hover {
-    text-decoration: underline;
-    color: white;
+  text-decoration: underline;
+  color: #ff0099;
 }

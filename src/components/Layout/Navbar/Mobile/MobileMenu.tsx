@@ -18,7 +18,6 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ closeMenu }) => {
       animate={{ height: "100%" }}
       exit={{ height: 0, transition: { duration: 0.5, ease: "easeInOut" } }}
       className={styles.container}
-      style={{ backgroundImage: `url(${Background})` }}
     >
       <motion.div
         initial={{ opacity: 0 }}
