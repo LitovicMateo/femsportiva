@@ -4,9 +4,9 @@ const nextConfig = {
     removeConsole: false,
   },
   env: {
-    title: "Sportiva X",
+    title: "Femsportiva",
     NEXT_PUBLIC_WORDPRESS_URL: "https://lime-panther-317414.hostingersite.com",
-    NEXT_PUBLIC_URL: "https://sportcastplus.com/",
+    NEXT_PUBLIC_URL: "https://femsportiva.com/",
     FAUST_SECRET_KEY: "72dbd92e-14d3-4d4e-b143-639c6756df40",
     NEXT_PUBLIC_WORDPRESS_API_ENDPOINT:
       "https://lime-panther-317414.hostingersite.com/graphql",
