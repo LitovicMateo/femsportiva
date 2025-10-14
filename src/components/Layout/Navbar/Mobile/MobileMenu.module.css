@@ -3,7 +3,7 @@
   top: 56px;
   width: 100vw;
   background-position: center;
-  background-color: #1d1d1d;
+  background-color: whitesmoke;
   display: flex;
   justify-content: center;
   align-items: start;
@@ -13,7 +13,7 @@
 .outerContainer {
   width: 80%;
   height: fit-content;
-  margin-top: 4em;
+  margin-top: 1em;
 }
 
 .innerContainer {
@@ -23,7 +23,7 @@
   flex-direction: column;
   justify-content: start;
   gap: 16px;
-  background-color: #1d1d1dde;
+  background-color: whitesmoke;
   font-size: 18px !important;
 }
 
