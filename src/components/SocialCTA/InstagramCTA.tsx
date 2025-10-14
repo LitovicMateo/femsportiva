@@ -35,7 +35,7 @@ const InstagramCTA = () => {
                   src={`/instagram/instagram_${index + 1}.jpg`}
                   fill
                   alt=""
-                  style={{objectFit: "cover"}}
+                  style={{ objectFit: "cover" }}
                   className={styles.image}
                 />
               </Link>

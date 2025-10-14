@@ -1,83 +1,81 @@
 .container {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: space-between;
 }
 
 .category {
-    font-size: 12px;
-    padding: 4px 0;
-    text-transform: uppercase;
-    color: #ff0000;
-    letter-spacing: 0.05em;
-    font-weight: 600;
+  font-size: 12px;
+  padding: 4px 0;
+  text-transform: uppercase;
+  color: #ff0099;
+  letter-spacing: 0.05em;
+  font-weight: 600;
 }
 
 .title {
-    text-wrap: wrap;
-    font-size: 18px;
+  text-wrap: wrap;
+  font-size: 18px;
 }
 
 .outerContainer {
-    display: flex;
-    flex-direction: row-reverse;
-    padding: 8px 0;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 12px;
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 8px 0;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
 }
 
 .innerContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 4px;
-    color: #8a8a8a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  color: #8a8a8a;
 }
 
 .icon {
-    font-size: 14px;
+  font-size: 14px;
 }
 
 .excerpt {
-    display: none;
+  display: none;
 }
 
 @media only screen and (min-width: 600px) {
-    .container {
-        justify-content: start;
-        flex: 2
-    }
+  .container {
+    justify-content: start;
+    flex: 2;
+  }
 
-    .outerContainer {
-        justify-content: start;
-        flex-direction: row;
-        gap: 12px
-    }
+  .outerContainer {
+    justify-content: start;
+    flex-direction: row;
+    gap: 12px;
+  }
 
-    .excerpt {
-        display: block;
-        overflow-y: hidden;
-        text-overflow: ellipsis;
-        height: 100%;
-        width: 100%;
+  .excerpt {
+    display: block;
+    overflow-y: hidden;
+    text-overflow: ellipsis;
+    height: 100%;
+    width: 100%;
+  }
 
-    }
-
-    .excerpt>p {
-        display: -webkit-box;
-        -webkit-box-orient: vertical;
-        -webkit-line-clamp: 4;
-        line-clamp: 4;
-        overflow: hidden;
-    }
+  .excerpt > p {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    line-clamp: 4;
+    overflow: hidden;
+  }
 }
 
 @media only screen and (min-width: 800px) {
-
-    .excerpt>p {
-        -webkit-line-clamp: 4;
-        line-clamp: 4;
-    }
+  .excerpt > p {
+    -webkit-line-clamp: 4;
+    line-clamp: 4;
+  }
 }
