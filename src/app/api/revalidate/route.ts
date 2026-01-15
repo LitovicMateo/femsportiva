@@ -15,7 +15,14 @@ export async function POST(req: Request) {
     const headerSecret = (req as any).headers?.get
       ? (req as any).headers.get("x-revalidate-secret")
       : undefined;
-    const secret = body.secret || headerSecret;
+    let querySecret: string | null = null;
+    try {
+      const reqUrl = new URL((req as any).url ?? "", "http://localhost");
+      querySecret = reqUrl.searchParams.get("secret");
+    } catch (e) {
+      // ignore
+    }
+    const secret = body.secret || headerSecret || querySecret;
 
     if (!process.env.REVALIDATE_SECRET) {
       console.error("REVALIDATE_SECRET not set in environment");
@@ -32,8 +39,14 @@ export async function POST(req: Request) {
     // If the webhook sends a post_status and it's not published, skip revalidation.
     const postStatus = body.post?.post_status || body.post_status;
     if (postStatus && postStatus !== "publish") {
-      console.log("Skipping revalidation for non-published post, status=", postStatus);
-      return NextResponse.json({ revalidated: false, reason: "post not published" });
+      console.log(
+        "Skipping revalidation for non-published post, status=",
+        postStatus,
+      );
+      return NextResponse.json({
+        revalidated: false,
+        reason: "post not published",
+      });
     }
 
     const paths = new Set<string>();
