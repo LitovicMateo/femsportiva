@@ -29,6 +29,13 @@ export async function POST(req: Request) {
       return NextResponse.json({ revalidated: false }, { status: 401 });
     }
 
+    // If the webhook sends a post_status and it's not published, skip revalidation.
+    const postStatus = body.post?.post_status || body.post_status;
+    if (postStatus && postStatus !== "publish") {
+      console.log("Skipping revalidation for non-published post, status=", postStatus);
+      return NextResponse.json({ revalidated: false, reason: "post not published" });
+    }
+
     const paths = new Set<string>();
 
     // Add homepage (optional but useful)
