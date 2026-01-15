@@ -5,6 +5,9 @@ const nextConfig = {
   },
   env: {
     title: "Femsportiva",
+    // NOTE: set REVALIDATE_SECRET in your hosting environment or .env.local
+    // Do NOT commit a real secret to source control.
+    REVALIDATE_SECRET: process.env.REVALIDATE_SECRET || "",
     NEXT_PUBLIC_WORDPRESS_URL: "https://lime-panther-317414.hostingersite.com",
     NEXT_PUBLIC_URL: "https://femsportiva.com/",
     FAUST_SECRET_KEY: "72dbd92e-14d3-4d4e-b143-639c6756df40",
