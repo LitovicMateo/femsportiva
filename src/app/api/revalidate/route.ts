@@ -24,17 +24,8 @@ export async function POST(req: Request) {
     }
     const secret = body.secret || headerSecret || querySecret;
 
-    if (!process.env.REVALIDATE_SECRET) {
-      console.error("REVALIDATE_SECRET not set in environment");
-      return NextResponse.json(
-        { revalidated: false, reason: "server misconfigured" },
-        { status: 500 },
-      );
-    }
-
-    if (secret !== process.env.REVALIDATE_SECRET) {
-      return NextResponse.json({ revalidated: false }, { status: 401 });
-    }
+    // Secret validation is disabled (handled externally).
+    // If you enable it later, restore checks against process.env.REVALIDATE_SECRET.
 
     // If the webhook sends a post_status and it's not published, skip revalidation.
     const postStatus = body.post?.post_status || body.post_status;
