@@ -86,7 +86,7 @@ export async function GET(req: Request, context: Context) {
 
     const json: ApiResponse = await res.json();
 
-    revalidatePath(req.url);
+    // revalidatePath(req.url);
     return NextResponse.json(json.data);
   } catch (error) {
     console.error("An error occurred while fetching data:", error);

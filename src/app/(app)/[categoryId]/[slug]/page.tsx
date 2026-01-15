@@ -13,7 +13,7 @@ type PageProps = {
   searchParams: { [key: string]: string | string[] | undefined };
 };
 
-export const revalidate = 300; // Revalidate this page every 5 minutes
+// export const revalidate = 300; // Revalidate this page every 5 minutes
 
 const SinglePostPage: React.FC<PageProps> = async (props) => {
   const isPreview = hasPreviewProps(props);

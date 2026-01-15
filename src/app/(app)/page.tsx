@@ -8,7 +8,7 @@ import ArticleList from "@/components/ArticleList/List/ArticleList";
 import styles from "./Page.module.css";
 import ArticleAd from "@/components/Ads/ArticleAd";
 
-export const revalidate = 0;
+// export const revalidate = 0;
 
 export default async function Home() {
   const posts = await fetchRecentPosts();

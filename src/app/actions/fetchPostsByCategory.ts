@@ -39,6 +39,6 @@ export async function fetchPostsByCategory(categoryId: string) {
   const { data }: { data: { posts: { nodes: PostData[] } } } =
     await client.query({ query: query });
 
-  revalidatePath(`/${categoryId}`);
+  // revalidatePath(`/${categoryId}`);
   return data.posts.nodes;
 }
