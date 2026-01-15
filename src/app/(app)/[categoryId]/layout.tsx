@@ -7,7 +7,7 @@ type MetadataProps = {
   params: { categoryId: string };
 };
 
-export const revalidate = 300; // Revalidate this page every 5 minutes
+// export const revalidate = 300; // Revalidate this page every 5 minutes
 
 export async function generateMetadata({
   params,
